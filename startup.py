@@ -7,8 +7,8 @@ from src.prompts.system_prompt import system_prompt_gemini_answer_agent, system_
 load_dotenv()
 
 controller = Controller(
-    text_index_path="data/faiss/articles_text.index",
-    text_metadata_path="data/metadata/metadata_article.pkl",
+    text_index_path="data/faiss/corpus_faiss_by_chunks.index",
+    text_metadata_path="data/metadata/corpus_faiss_metadata_chunks.pkl",
     image_index_path="data/faiss/image.index",
     image_metadata_path="data/metadata/metadata_image.pkl",
     qa_system_prompt=system_prompt_gemini_answer_agent,

@@ -1,0 +1,106 @@
+[
+  {
+    "question": "What course did AI Fund provide to non-engineers to help them get started with AI coding?",
+    "ground_truth": "A course called “AI Python for Beginners” was given to all non-engineers at AI Fund."
+  },
+  {
+    "question": "Name one application built by a non-engineer at AI Fund, and the time saved.",
+    "ground_truth": "The CFO, Ellen Li, built an app that scans Google Docs and flags portfolio updates — saving 5 to 6 hours of manual work per week."
+  },
+  {
+    "question": "What is the main argument Andrew Ng makes about the ability to “vibe code”?",
+    "ground_truth": "He argues that for the foreseeable future, writing code with AI assistance will be the best way to direct computers—so non-engineers should learn to “vibe code.”"
+  },
+  {
+    "question": "What is the name and parameter count of the new open-weight LLM introduced in the issue?",
+    "ground_truth": "The new model is DeepSeek‑R1‑0528, a mixture-of-experts transformer with 685 billion parameters (37B active)."
+  },
+  {
+    "question": "According to performance comparisons, how much did DeepSeek‑R1‑0528 improve versus its predecessor on reasoning benchmarks like HLE?",
+    "ground_truth": "It improved from solving 8.5% of reasoning problems to 17.7% on HLE benchmarks."
+  },
+  {
+    "question": "How many new language courses did Duolingo launch using generative AI, and how did that compare to their historical pace?",
+    "ground_truth": "Duolingo launched 148 new courses in under a year—more than doubling its total, compared to 100 courses over 12 years previously."
+  },
+  {
+    "question": "What seven “most popular non-English languages” did Duolingo adapt for all 28 UI languages?",
+    "ground_truth": "Spanish, French, German, Italian, Japanese, Korean, and Mandarin were adapted."
+  },
+  {
+    "question": "Which AI model providers has Duolingo used for their course building and math curriculum, according to the article?",
+    "ground_truth": "Duolingo uses OpenAI models, and is evaluating Anthropic (Claude) and Google, having found Claude “much better” for math content."
+  },
+  {
+    "question": "What was Duolingo CEO Luis von Ahn’s policy regarding contractor use after the shift to AI-first?",
+    "ground_truth": "He stated they would gradually stop using contractors for tasks AI can handle, and instead hire more engineers and AI researchers."
+  },
+  {
+    "question": "What user concerns or backlash have emerged following Duolingo’s AI-first strategy?",
+    "ground_truth": "Users complained of lower-quality, AI-generated lessons, some deleted the app, and backlash erupted over the shift from human contractors to bots, with critics warning of garbled or biased content."
+  },
+  {
+    "question": "What is the full name and parameter size of the updated DeepSeek model?",
+    "ground_truth": "The model is DeepSeek‑R1‑0528, a mixture-of-experts transformer with 685 billion parameters (37 billion active)."
+  },
+  {
+    "question": "How does DeepSeek‑R1‑0528’s performance compare to its predecessor on the HLE reasoning benchmark and the Aider coding benchmark?",
+    "ground_truth": "On HLE, it improved from 8.5% to 17.7% of problems solved; on Aider, from 53.3% to 71.6%."
+  },
+  {
+    "question": "Which closed-source models does DeepSeek‑R1‑0528 approach or surpass in benchmarks across math, coding, and reasoning tasks?",
+    "ground_truth": "It approaches OpenAI o3 and Google Gemini‑2.5 Pro, outperforming them on AIME 2024–2025 and LiveCodeBench in some cases."
+  },
+  {
+    "question": "What is the size and unique benefit of the distilled variant DeepSeek‑R1‑0528‑Qwen3‑8B?",
+    "ground_truth": "It’s an 8-billion parameter model distilled from Qwen3‑8B combined with reasoning knowledge, and it can run on a single GPU with 40 GB VRAM."
+  },
+  {
+    "question": "By what percentage did hallucinations decrease when using DeepSeek‑R1‑0528 for rewriting and summarizing tasks?",
+    "ground_truth": "Hallucinations dropped by around 50% in rewriting and summarization tasks."
+  },
+  {
+    "question": "What are some of the key advancements of Claude 4?",
+    "ground_truth": "Claude 4 models can make reasoning tokens visible (within limits), and Claude Opus 4 can create and manipulate files given local file access. Both Claude 4 models tied Google Gemini 2.5 Pro at the top of the LMSys WebDev Arena and achieved top marks for coding and agentic computer-use benchmarks in Anthropic's tests."
+  },
+  {
+    "question": "How were the Claude 4 models trained?",
+    "ground_truth": "The Claude 4 models were trained on a mix of publicly available information on the web, proprietary purchased data, data from Claude users who opted to share their inputs and outputs, and generated data."
+  },
+  {
+    "question": "What are the names of the new Claude models introduced by Anthropic?",
+    "ground_truth": "Anthropic introduced two new models: Claude 4 Sonnet and Claude 4 Opus."
+  },
+  {
+    "question": "How do the Claude 4 models perform in coding benchmarks compared to previous models?",
+    "ground_truth": "The Claude 4 Sonnet and Claude 4 Opus models have achieved top benchmarks in coding, outperforming their predecessors with enhanced capabilities in code generation and understanding."
+  },
+  {
+    "question": "What is one key improvement in the Claude 4 models over earlier Claude models?",
+    "ground_truth": "One key improvement in the Claude 4 models is their superior performance in coding tasks, demonstrating enhanced reasoning and accuracy in code-related benchmarks."
+  },
+  {
+    "question": "What is the significance of Anthropic’s focus on safety in the development of the Claude 4 models?",
+    "ground_truth": "Anthropic’s focus on safety in the Claude 4 models ensures that these AI systems are designed to be more reliable and aligned with human values, reducing the risk of harmful outputs."
+  },
+  {
+    "question": "How does Anthropic position the Claude 4 models in the competitive AI landscape?",
+    "ground_truth": "Anthropic positions the Claude 4 Sonnet and Opus models as leading contenders in the AI landscape, emphasizing their top-tier performance in coding and other benchmarks, competing with other advanced AI models."
+  },
+  {
+    "question": "How do large language models handle context in natural language processing tasks?",
+    "ground_truth": "Large language models handle context by using transformer architectures that process input text with attention mechanisms, allowing them to weigh the importance of different words or phrases in a sequence. This enables the model to capture relationships and dependencies across long text spans, improving tasks like text generation or sentiment analysis."
+  },
+  {
+    "question": "What role does reinforcement learning play in developing autonomous systems?",
+    "ground_truth": "Reinforcement learning enables autonomous systems to learn optimal actions by interacting with an environment, receiving rewards or penalties based on their decisions. This approach is used in applications like robotics or self-driving cars, where the system improves its behavior over time through trial and error."
+  },
+  {
+    "question": "How can AI models be made more energy-efficient for large-scale deployment?",
+    "ground_truth": "AI models can be made more energy-efficient through techniques like model pruning, quantization, and using specialized hardware like TPUs or GPUs. Additionally, optimizing algorithms for sparse computation and leveraging smaller, distilled models reduce computational demands while maintaining performance."
+  },
+  {
+    "question": "What ethical considerations arise when deploying AI in healthcare diagnostics?",
+    "ground_truth": "Ethical considerations in AI healthcare diagnostics include ensuring model fairness to avoid biases across patient demographics, maintaining transparency in decision-making processes, protecting patient data privacy, and validating model reliability to prevent misdiagnoses that could harm patients."
+  }
+]

@@ -1,4 +1,4 @@
-from sentence_transformers import SentenceTransformer
+from sentence_transformers import SentenceTransformer, CrossEncoder, util
 import warnings
 
 warnings.filterwarnings("ignore", category=FutureWarning, module="huggingface_hub.file_download")
@@ -15,14 +15,15 @@ class Encoder:
         encoder (SentenceTransformer): The SentenceTransformer model used for encoding.
     """
 
-    def __init__(self):
+    def __init__(self, model: str = 'all-MiniLM-L6-v2', reranker_model: str = 'cross-encoder/ms-marco-MiniLM-L-6-v2'):
         """Initialize the Encoder with a SentenceTransformer model.
 
         Loads the 'all-MiniLM-L6-v2' SentenceTransformer model, which is a lightweight
         model optimized for generating sentence embeddings.
 
         """
-        self.encoder = SentenceTransformer('all-MiniLM-L6-v2')
+        self.encoder = SentenceTransformer(model)
+        self.reranker = CrossEncoder(reranker_model)
 
     def get_encoder(self) -> SentenceTransformer:
         """Retrieve the SentenceTransformer model instance.
@@ -36,6 +37,19 @@ class Encoder:
             embeddings = model.encode(["This is a sentence."])
         """
         return self.encoder
+
+    def get_reranker(self) -> CrossEncoder:
+        """Retrieve the CrossEncoder reranker model instance.
+
+        Returns:
+            CrossEncoder: The initialized CrossEncoder model.
+
+        Example:
+            encoder = Encoder()
+            reranker = encoder.get_reranker()
+            scores = reranker.predict([("query", "document")])
+        """
+        return self.reranker
 
 
 # Singleton instance of the Encoder class for global access

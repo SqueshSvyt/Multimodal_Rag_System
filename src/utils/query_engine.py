@@ -28,6 +28,7 @@ class QueryEngine:
             data_type (str, optional): Type of data for queries (e.g., "text"). Defaults to "text".
         """
         self.encoder = ENCODER.get_encoder()
+        self.reranker = ENCODER.get_reranker()
 
         self.index = faiss.read_index(index_path)
 
@@ -36,7 +37,7 @@ class QueryEngine:
 
         self.data_type = data_type
 
-    def query(self, query_input: str, k: int = 5) -> list:
+    def query(self, query_input: str, k: int = 20, rerank_k: int = 20) -> list:
         """Perform a similarity search to retrieve the top-k most similar items.
 
         Encodes the query input into a vector and searches the FAISS index to find
@@ -54,11 +55,12 @@ class QueryEngine:
 
         distances, indices = self.index.search(query_vector, k)
 
-        results = []
+        docs = []
         for idx, dist in zip(indices[0], distances[0]):
-            results.append(self.metadata[idx])
+            docs.append(self.metadata[idx])
 
-        return results
+        reranked = self._rerank(query_input, docs)
+        return reranked[:rerank_k]
 
     def _encode(self, query_input: str) -> np.ndarray:
         """Encode the query input into a vector representation.
@@ -73,3 +75,25 @@ class QueryEngine:
             np.ndarray: The encoded query vector as a numpy array.
         """
         return self.encoder.encode([query_input], convert_to_numpy=True)
+
+    def _rerank(self, query: str, documents: list[dict]) -> list[dict]:
+        """
+        Rerank retrieved documents using a cross-encoder reranker.
+
+        Args:
+            query (str): The input query.
+            documents (list[dict]): A list of metadata entries, each containing at least a 'text' field.
+
+        Returns:
+            list[dict]: The input documents sorted by their relevance to the query.
+        """
+        if self.data_type == 'image':
+            pairs = [(query, doc["image_descriptions"]) for doc in documents]
+        else:
+            pairs = [(query, doc["content"]) for doc in documents]
+
+        scores = self.reranker.predict(pairs)
+
+        reranked = sorted(zip(documents, scores), key=lambda x: x[1], reverse=True)
+
+        return [doc for doc, _ in reranked]

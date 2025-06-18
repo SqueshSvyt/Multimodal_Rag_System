@@ -140,7 +140,8 @@ class Controller:
         except Exception as e:
             return {"text": None, "image_urls": [], "error": str(e)}
 
-    def retrieve(self, question: str, uploaded_files: Optional[List[str]] = None) -> tuple:
+    def retrieve(self, question: str, uploaded_files: Optional[List[str]] = None, html_output_text: bool = True,
+                 content: bool = False) -> tuple:
         """Process a query with optional uploaded files and retrieve relevant results.
 
         Args:
@@ -174,10 +175,10 @@ class Controller:
         query = self.translator.simple_query(enhanced_question)['query']
 
         # Retrieve text and image results
-        result_text = self.text_engine.query(query, k=3)
-        result_image = self.image_engine.query(query, k=10)
+        result_text = self.text_engine.query(query, k=20)
+        result_image = self.image_engine.query(query, k=12)
 
-        urls = [result['article_url'] for result in result_text]
+        urls = [result['article_url'] for result in result_text[:5]]
         images = [image['image_urls'] for image in result_image]
         combined_text = "\n".join(result['content'] for result in result_text)
 
@@ -193,12 +194,18 @@ class Controller:
 
         # Generate HTML output
         image_html = self.show_html_image_response(parsed_output['image_urls']) if parsed_output['image_urls'] else ""
-        html_output = self.show_html_response(parsed_output['text']) + image_html
+
+        output = parsed_output['text']
+        if html_output_text:
+            output = self.show_html_response(parsed_output['text']) + image_html
 
         # Format URLs as Markdown
         urls_markdown = "\n".join(f"- [{url}]({url})" for url in urls)
 
-        return urls_markdown, images, html_output
+        if content:
+            return urls_markdown, images, output, result_text
+
+        return urls_markdown, images, output
 
     def clear(self) -> tuple:
         """Clear input fields.
