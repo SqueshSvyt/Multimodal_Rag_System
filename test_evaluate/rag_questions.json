@@ -102,5 +102,101 @@
   {
     "question": "What ethical considerations arise when deploying AI in healthcare diagnostics?",
     "ground_truth": "Ethical considerations in AI healthcare diagnostics include ensuring model fairness to avoid biases across patient demographics, maintaining transparency in decision-making processes, protecting patient data privacy, and validating model reliability to prevent misdiagnoses that could harm patients."
+  },
+  {
+    "question": "What is the main reason Amazon hired most of Adept AI's staff?",
+    "ground_truth": "Amazon hired most of Adept AI's staff to boost its agentic AI capabilities, specifically to build agents that can automate software workflows as part of its artificial general intelligence (AGI) autonomy team."
+  },
+  {
+    "question": "Who is the CEO of Adept AI that Amazon hired?",
+    "ground_truth": "Amazon hired David Luan, the CEO of Adept AI, along with four of his fellow co-founders."
+  },
+  {
+    "question": "What type of technology did Amazon license from Adept AI?",
+    "ground_truth": "Amazon licensed Adept’s models, datasets, and other technology non-exclusively."
+  },
+  {
+    "question": "What is the focus of the remaining Adept AI employees who were not hired by Amazon?",
+    "ground_truth": "The remaining Adept AI employees will focus entirely on solutions that enable agentic AI, based on proprietary models, custom infrastructure, and other technology."
+  },
+  {
+    "question": "What is an example of a task Adept’s technology can perform?",
+    "ground_truth": "Adept’s technology can enable a recruiter to find promising job candidates on LinkedIn and import their profiles into a Salesforce database using natural-language commands."
+  },
+  {
+    "question": "Why did Adept AI decide against continuing to build foundation models independently?",
+    "ground_truth": "Adept AI found that the high cost of building foundation models was unsustainable without further fundraising, prompting a strategic shift to focus on agentic AI solutions."
+  },
+  {
+    "question": "How does Amazon’s agreement with Adept AI compare to another company’s actions in the AI industry?",
+    "ground_truth": "Amazon’s agreement with Adept AI echoes Microsoft’s absorption of Inflection AI in March, where Microsoft hired key staff and licensed technology to avoid a full acquisition."
+  },
+  {
+    "question": "Who developed the FastRLAP method for training robots?",
+    "ground_truth": "FastRLAP was developed by Hao Liu, Yash Shukla, and colleagues at UC San Diego."
+  },
+  {
+    "question": "What type of learning approach does FastRLAP combine to train robots efficiently?",
+    "ground_truth": "FastRLAP combines reinforcement learning with a small amount of human assistance to train robots efficiently in real-world settings."
+  },
+  {
+    "question": "What specific tasks were the robots trained to perform using FastRLAP in the experiments?",
+    "ground_truth": "The robots were trained to perform tasks such as stacking blocks, wiping surfaces, opening drawers, and picking up objects."
+  },
+  {
+    "question": "How does FastRLAP utilize human assistance during the training process?",
+    "ground_truth": "FastRLAP uses an algorithmic teacher that learns from human demonstrations to provide real-time guidance, helping the robot correct its actions during training."
+  },
+  {
+    "question": "What is the significance of DeepSeek’s new mathematical model introduced in May 2025?",
+    "ground_truth": "DeepSeek-Prover-V2 is an open-weights large language model designed for formal proofs in Lean 4, using a recursive theorem-proving pipeline to decompose complex mathematical problems into manageable subgoals."
+  },
+  {
+    "question": "What are the features of Google’s 'Little Language Lessons' tools?",
+    "ground_truth": "Google’s 'Little Language Lessons' include Tiny Lesson for situation-specific vocabulary, Slang Hang for authentic native speaker conversations, and Word Cam for image-based object identification and translation, all powered by the Gemini API."
+  },
+  {
+    "question": "How does DeepWiki assist developers in understanding GitHub repositories?",
+    "ground_truth": "DeepWiki generates architecture diagrams, documentation, and source code links for GitHub repositories, offering visual maps, project summaries, and a conversational interface powered by Devin Search for context-grounded answers."
+  },
+  {
+    "question": "What is the focus of Meta’s latest ChatGPT competitor mentioned in May 2025?",
+    "ground_truth": "Meta’s latest ChatGPT competitor focuses on advancing conversational AI capabilities, aiming to compete with models like ChatGPT through improved natural language understanding and generation."
+  },
+  {
+    "question": "What advancements does DeepSeek’s recursive theorem-proving pipeline offer?",
+    "ground_truth": "DeepSeek’s recursive theorem-proving pipeline uses DeepSeek-V3 to break down complex mathematical problems into subgoals while formalizing steps, enhancing the model’s ability to handle formal proofs efficiently."
+  },
+  {
+    "question": "How does Word Cam function in Google’s language learning tools?",
+    "ground_truth": "Word Cam uses image recognition to identify objects in photos and provide translations, offering a contextual and personalized language learning experience."
+  },
+  {
+    "question": "What makes DeepWiki accessible for public GitHub repositories?",
+    "ground_truth": "DeepWiki is free for public GitHub repositories, requiring no installation; users simply replace 'github.com' with 'deepwiki.com' in the repository URL to access its features."
+  },
+  {
+    "question": "What is the purpose of the AI shopping advancements highlighted in May 2025?",
+    "ground_truth": "AI shopping advancements aim to enhance online retail experiences through personalized recommendations, improved search capabilities, and streamlined purchasing processes."
+  },
+  {
+    "question": "What is the main focus of the new method developed by researchers at Google DeepMind and Stanford University for improving large language models?",
+    "ground_truth": "The new method, called Language Model Cascades, focuses on combining multiple large language models in a probabilistic framework to improve performance while reducing computational costs."
+  },
+  {
+    "question": "How does the Augmenting Queries with Recency Context method improve search engine performance?",
+    "ground_truth": "The Augmenting Queries with Recency Context method improves search engine performance by adding recent user behavior and trending data to search queries, enabling more relevant and timely results."
+  },
+  {
+    "question": "What is the purpose of DeepLearning.AI’s new course mentioned in the article?",
+    "ground_truth": "DeepLearning.AI’s new course, 'Generative AI for Software Development,' aims to teach developers how to use generative AI tools to enhance software development processes."
+  },
+  {
+    "question": "What challenge did researchers address with the new text-to-speech model discussed in the article?",
+    "ground_truth": "Researchers addressed the challenge of generating natural-sounding speech in multiple languages with low latency, improving the quality and efficiency of text-to-speech systems."
+  },
+  {
+    "question": "What is the significance of the new open-source dataset for training autonomous driving models?",
+    "ground_truth": "The new open-source dataset provides a diverse set of real-world driving scenarios, enabling more robust and generalizable training for autonomous driving models."
   }
 ]
